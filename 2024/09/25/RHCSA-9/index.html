@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Redhat의 자격증 RHCSA 9 을 준비하면서 알게된 내용을 정리해 두려고 한다.
+1. Manage Filescommand1234567cprmmvmkdirrmdir or rm -rchgrpchown
+
+
+
+2. Manage Local Users and Groupsfi"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Lee Yeeun"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="RHCSA 9"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Redhat의 자격증 RHCSA 9 을 준비하면서 알게된 내용을 정리해 두려고 한다.
+1. Manage Filescommand1234567cprmmvmkdirrmdir or rm -rchgrpchown
+
+
+
+2. Manage Local Users and Groupsfi"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dodamon"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://dodamon.github.ioimg/home-bg2.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://dodamon.github.ioimg/home-bg2.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>RHCSA 9 - Dodamon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://dodamon.github.io/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>RHCSA 9</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-25
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Redhat의 자격증 RHCSA 9 을 준비하면서 알게된 내용을 정리해 두려고 한다.</p>
+<h2 id="1-Manage-Files"><a href="#1-Manage-Files" class="headerlink" title="1. Manage Files"></a>1. Manage Files</h2><h4 id="command"><a href="#command" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span></span><br><span class="line"><span class="built_in">rm</span></span><br><span class="line"><span class="built_in">mv</span></span><br><span class="line"><span class="built_in">mkdir</span></span><br><span class="line"><span class="built_in">rmdir</span> or <span class="built_in">rm</span> -r</span><br><span class="line"><span class="built_in">chgrp</span></span><br><span class="line"><span class="built_in">chown</span></span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="2-Manage-Local-Users-and-Groups"><a href="#2-Manage-Local-Users-and-Groups" class="headerlink" title="2. Manage Local Users and Groups"></a>2. Manage Local Users and Groups</h2><h4 id="files-etc-passwd-etc-group-etc-shadow-etc-login-def-etc-sudoers"><a href="#files-etc-passwd-etc-group-etc-shadow-etc-login-def-etc-sudoers" class="headerlink" title="files) /etc/passwd /etc/group /etc/shadow /etc/login.def /etc/sudoers"></a>files) <code>/etc/passwd</code> <code>/etc/group</code> <code>/etc/shadow</code> <code>/etc/login.def</code> <code>/etc/sudoers</code></h4><h4 id="command-1"><a href="#command-1" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">useradd</span><br><span class="line">groupadd</span><br><span class="line">userdel</span><br><span class="line">groupdel</span><br><span class="line">usermod</span><br><span class="line"></span><br><span class="line">chage username</span><br><span class="line"></span><br><span class="line">su - username</span><br><span class="line">sudo <span class="built_in">command</span></span><br><span class="line">visudo</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="3-Control-Services-and-Daemon"><a href="#3-Control-Services-and-Daemon" class="headerlink" title="3. Control Services and Daemon"></a>3. Control Services and Daemon</h2><h4 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h4><ul>
+<li>부팅 때 자동으로 켜지고 계속 백그라운드에서 실행되는 프로세스</li>
+<li>메모리에 상주해 있다가 사용자 요청이 오면 응답하는 프로세스</li>
+<li>서비스는 눈에 보이지 않지만 현재 시스템에서 동작 중인 프로세스이므로 백그라운드 프로세스의 일종이라고 할 수 있다.</li>
+</ul>
+<h4 id="Deamon"><a href="#Deamon" class="headerlink" title="Deamon"></a>Deamon</h4><ul>
+<li>부팅 때 자동으로 켜지고 계속 백그라운드에서 실행되는 프로세스</li>
+<li>주로 시스템의 특정 작업이나 <ins>서비스</ins>를 관리한다.</li>
+<li>예: cron (스케줄 관리), sshd (SSH 서비스), httpd (웹 서버), systemd</li>
+</ul>
+<h3 id="3-1-systemd"><a href="#3-1-systemd" class="headerlink" title=" 3-1. systemd "></a><span style="color:gray"> 3-1. systemd </span></h3><ul>
+<li>서비스 매니저 프로그램으로 서비스를 작동시키거나 관리한다</li>
+<li>OS 부팅 시 운영체제 중 최초로 시작되는 프로세스 <code>1번 PID</code></li>
+<li>리눅스의 정상적인 부팅을 위해 초기화 해주는 역할 + 시스템을 총 관리하는 역할</li>
+</ul>
+<h4 id="command-2"><a href="#command-2" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Check all running services</span></span><br><span class="line">systemctl --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># To check the status, start, stop and restart a service</span></span><br><span class="line">systemctl status|start|stop|restart application.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># To reload the configuration of a service</span></span><br><span class="line">systemctl reload application.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># To enable or disable service at boot time</span></span><br><span class="line">systemctl <span class="built_in">enable</span>|<span class="built_in">disable</span> application.sercice</span><br><span class="line"></span><br><span class="line"><span class="comment"># To enable or disable a service completely (upon another service dependency)</span></span><br><span class="line">systemctl mask|unmask application.service</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-sshd"><a href="#3-2-sshd" class="headerlink" title=" 3-2. sshd "></a><span style="color:gray"> 3-2. sshd </span></h3><ul>
+<li>secure shell</li>
+<li>여기서 shell 은 말그대로 껍질을 의미하며 리눅스 시스템과의 인터페이스를 제공한다.</li>
+<li>shell 은 사용자의 command를 커널에게 번역해서 하드웨어를 관리할 수 있도록한다.</li>
+<li>SSH는 항상 암호화 되어있어 보안성이 높지만 <code>/etc/ssh/sshd_config</code> 설정을 통해 보안성을 더 높일 수 있다.</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Configure Idle Timeout Interval</span><br><span class="line">Disable root login</span><br><span class="line">Disable Empty Passwords</span><br><span class="line">Limit Users&#x27; SSH Access</span><br><span class="line">Use a different port ( default 22 )</span><br><span class="line">Access Remote Server without Password</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="4-Manage-Network"><a href="#4-Manage-Network" class="headerlink" title="4. Manage Network"></a>4. Manage Network</h2><h4 id="files-etc-sysconfig-network-scripts-etc-hosts-etc-hostname-etc-resolv-conf-etc-nsswitch-conf"><a href="#files-etc-sysconfig-network-scripts-etc-hosts-etc-hostname-etc-resolv-conf-etc-nsswitch-conf" class="headerlink" title="files) /etc/sysconfig/network-scripts /etc/hosts /etc/hostname /etc/resolv.conf /etc/nsswitch.conf"></a>files) <code>/etc/sysconfig/network-scripts</code> <code>/etc/hosts</code> <code>/etc/hostname</code> <code>/etc/resolv.conf</code> <code>/etc/nsswitch.conf</code></h4><h4 id="command-3"><a href="#command-3" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ping</span><br><span class="line">ifconfig or ip</span><br><span class="line">ifup or ifdown</span><br><span class="line">netstat</span><br><span class="line">traceroute</span><br><span class="line">tcpdump</span><br><span class="line">nslookup or dig</span><br><span class="line">ethtool</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<pre><code>-   public IP vs private Ip
+-   static Ip vs DHCP (Dynamic Host Configuration Protoco)
+</code></pre>
+<h3 id="4-1-nmcli"><a href="#4-1-nmcli" class="headerlink" title=" 4-1. nmcli"></a><span style="color:gray"> 4-1. nmcli</h3><ul>
+<li>리눅스는 시스템에서 네트워크 설정과 관리리를 쉽게 할 수 있도록 NetworkManager를 제공한다. nmcli은 커맨드 라인에서 이를 사용할 수 있도록 한다.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmcli [OPTIONS] OBJECT &#123;COMMAND | <span class="built_in">help</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>OBJECT</code>: 관리할 네트워크 객체 (예: connection, device, general 등)<br><code>COMMAND</code>: 실행할 작업 (예: show, up, down, add, delete 등)<br><code>OPTIONS</code>: 선택적으로 사용할 수 있는 플래그나 매개변수</p>
+<h4 id="command-4"><a href="#command-4" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># get network interface list</span></span><br><span class="line">nmcli device</span><br><span class="line"></span><br><span class="line">nmcli connection modify &lt;CON_NAME&gt; <span class="built_in">type</span> ethernet ifname &lt;INTERFACE_NAME&gt; ipv4.addresses &lt;IP&gt; ipv4.gateway &lt;GATEWAY_IP&gt; ipv4.dns &lt;NAME_SERVER&gt; ipv4.method manual autoconnect <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line">nmcli connection add con-name &lt;CON_NAME&gt; <span class="built_in">type</span> ethernet ifname &lt;INTERFACE_NAME&gt; ipv4.addresses &lt;IP&gt; ipv4.gateway &lt;GATEWAY_IP&gt; ipv4.dns &lt;NAME_SERVER&gt; ipv4.method static</span><br><span class="line"></span><br><span class="line">nmcli connection up &lt;CON_NAME&gt;</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="5-Archive-and-Transfer-Files"><a href="#5-Archive-and-Transfer-Files" class="headerlink" title="5. Archive and Transfer Files"></a>5. Archive and Transfer Files</h2><h3 id="5-1-tar"><a href="#5-1-tar" class="headerlink" title=" 5-1. tar"></a><span style="color:gray"> 5-1. tar</h3><ul>
+<li>여러 개의 파일을 하나의 파일로 묶거나 풀 때 사용하는 명령어로 “테이프 아카이버(Tape ARchiver)”의 앞 글자들을 조합하여 만들었다.</li>
+</ul>
+<h4 id="command-5"><a href="#command-5" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 현재 디렉토리의 모든 파일과 디렉토리를 tar로 묶기</span></span><br><span class="line">tar cvf test.tar</span><br><span class="line"><span class="comment"># tar 아카이브를 현재 디렉토리에 풀기</span></span><br><span class="line">tar xvf</span><br><span class="line"><span class="comment"># 확인</span></span><br><span class="line"><span class="built_in">ls</span> -ltr</span><br><span class="line"><span class="comment"># 현재 디렉토리를 tar로 묶고 gzip으로 압축하기</span></span><br><span class="line">tar zcvf test.tar.gz *</span><br><span class="line"><span class="comment"># gzip으로 압축된 tar 아카이브를 현재 디렉토리에 풀기</span></span><br><span class="line">tar zxvf test.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-ftp-and-scp"><a href="#5-2-ftp-and-scp" class="headerlink" title=" 5-2. ftp and scp"></a><span style="color:gray"> 5-2. ftp and scp</h3><ul>
+<li><p><strong>FTP (File Transfer Protocol)</strong> : 파일을 전송하는 통식 규약으로 기본 폴트는 21이지만 설정을 통해 변경해서 사용 할 수 있다. FTP는 암호화가 되지 않아서 tcp dump를 뜨면 내용이 다 보이기 때문에 실무에서는 사용하지 않는다.</p>
+</li>
+<li><p><strong>SCP (Secure Copy Protocol)</strong> : SSH 프로토콜 기반의 파일 전송(복사) 수단이다. 네트워크 연결환경에서 ssh와 동일한 22번 포트와 identy file을 사용해서 파일을 전송하기 때문에 보안적으로 안정된 프로토콜이다.</p>
+</li>
+</ul>
+<h4 id="command-6"><a href="#command-6" class="headerlink" title="command"></a>command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ftcp 192.168.11.x</span><br><span class="line">scp test.txt user01@192.168.11.x:/home/user01</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="6-System-Updates-and-Repos"><a href="#6-System-Updates-and-Repos" class="headerlink" title="6. System Updates and Repos"></a>6. System Updates and Repos</h2><p>리눅스 패키지(Linux Package)란 리눅스 시스템에서 소프트웨어를 실행하는데 필요한 파일들(실행 파일, 설정 파일, 라이브러리 등)이 담겨 있는 설치 파일 묶음이다. 리눅스 패키지는 말그대로 소스코드가 들어있는 <strong>소스 패키지(Source Package)</strong> 와 컴파일된 바이너리 파일이 들어 있는 <strong>바이너리 패키지(Binary Package)</strong> 가 있다. 소스 패키지는 컴파일 과정을 거쳐 바이너리 파일로 만든후 사용이 가능하기 때문에 리눅스의 기본 설치 패키지들은 소스 패키지에 비해 설치 시간도 짧고 오류가 발생할 가능성도 적은 바이너리 패키지로 되어있다.</p>
+<p>이러한 패키지를 관리하기 위해서는 패키지 관리 도구를 사용하는데 일반적으로 두 유형의 패키지 관리 도구가 사용된다.</p>
+<ul>
+<li><strong>yum (CentOS)</strong> : 인터넷 연결이 필요하다</li>
+<li><strong>apt-get (other Linux)</strong></li>
+<li><strong>rpm (Redhat Package Manager)</strong> : 인터넷이 없어도 <code>/var/lib/rpm</code> 에 위치하는 데이터베이스를 기반으로 페키지를 설치 및 관리 할 수 있다.</li>
+</ul>
+<h2 id="5-Linux-File-System⭐"><a href="#5-Linux-File-System⭐" class="headerlink" title="5. Linux File System⭐"></a>5. Linux File System⭐</h2></br>
+
+<h2 id="6-Monitor-and-Manage-Processes"><a href="#6-Monitor-and-Manage-Processes" class="headerlink" title="6. Monitor and Manage Processes"></a>6. Monitor and Manage Processes</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span></span><br><span class="line"><span class="built_in">du</span></span><br><span class="line"><span class="built_in">uptime</span></span><br><span class="line">top</span><br><span class="line">free</span><br><span class="line">lsof</span><br><span class="line">tcpdump</span><br><span class="line">netstat</span><br><span class="line">ps</span><br><span class="line"><span class="built_in">kill</span></span><br><span class="line">some other commands are vmstat, iostat, iftop etc.</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="7-Podman-Container"><a href="#7-Podman-Container" class="headerlink" title="7. Podman Container"></a>7. Podman Container</h2><p>Podman (Pod Manager tool) 는<br>컨테이너화된 애플리케이션을 관리하기 위한 오픈 소스 도구로, Docker와 유사한 기능을 제공하는 container engine이다.</p>
+<ul>
+<li>주로 리눅스 환경에서 사용</li>
+<li>컨테이너, 이미지, 볼륨, 네트워크를 관리할 수 있다.</li>
+<li>Daemonless : Podman의 가장 큰 특징중 하나는 데몬이 필요없다는 것이다.</li>
+<li>Docker는 중앙 데몬 프로세스를 통해 컨테이너를 관리하는 반면, Podman은 개별 컨테이너를 독립적으로 실행하고 관리할 수 있어 높은 보안성과 유연성을 제공한다. ( 컨테이너를 사용자의 권한으로 실행할 수 있다.)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ yum module install container-tools</span><br><span class="line"><span class="comment"># 외부에서 컨테이너 파일을 다운 받아 이미지로 빌드하는 법</span></span><br><span class="line"><span class="comment"># -t : tag</span></span><br><span class="line">$ wget &lt;URL&gt;</span><br><span class="line">$ podman build -t &lt;IMAGE_NAME&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># podman repository에서 이미지를 다운 받는 법</span></span><br><span class="line">$ podman search &lt;IMAGE_NAME&gt;</span><br><span class="line">$ podman pull &lt;IMAGE_NAME&gt;</span><br><span class="line">$ podman images</span><br><span class="line">$ podman inspect &lt;IMAGE_NAME&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 컨테이너 이미지 삭제</span></span><br><span class="line">$ podman rmi &lt;IMAGE_ID&gt;</span><br><span class="line">$ podman build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 컨테이너 실행</span></span><br><span class="line"><span class="comment"># -i : interactive : 표준 입력을 연결하여 사용자가 컨테이너와 상호작용할 수 있도록한다</span></span><br><span class="line"><span class="comment"># -t : tty : 가상 터미널 (tty)을 할당하여 터미널 세션을 열어 사용자가 컨테이너 내에서 인터렉티즈 셸을 사용할 수 있게 해준다.</span></span><br><span class="line"><span class="comment"># -d : 컨테이너를 백그라운드 모드(Detached mode)로 실행하는 데 사용</span></span><br><span class="line"><span class="comment"># --name : 컨테이너 이름 지정</span></span><br><span class="line">$ podman run -it &lt;IMAGE_NAME&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 컨테이너 삭제</span></span><br><span class="line">$ podman <span class="built_in">rm</span> &lt;CONTAINER_NAME&gt;</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="리눅스-그냥-재미로"><a href="#리눅스-그냥-재미로" class="headerlink" title="리눅스 * 그냥 재미로"></a>리눅스 * 그냥 재미로</h2><p>리눅스는 핀란드 출신의 공대생 리누스 토르발스(Linus Torvalds)가 처음 개발했다. 그는 MINIX라는 유닉스 계열의 운영체제을 접하면서 불편했던 점이 생겨 그냥 <strong>“재미로”</strong> 리눅스를 만들어 버렸다… 그렇게 리누스 토르발스와 GNU 프로젝트의 합작으로 리눅스는 세상에 태어나게 된다. 그리고 오픈소스 즉 무료였던 리눅스는 세간의 주목을 받고 여러 배포판이 생겨나게 되었다. 이제 서버, 모바일 우주정거장에도 리눅스 운영체제를 기반으로 시스템이 존재한다고 한다.</p>
+<p>추가로 리눅스의 마스코드인 귀여운 펭귄 턱스는 리루스 토르발스가 작은 푸른펭귄을 좋아해서 “행복하고 만족스러운” 모습의 펭귄 턱스가 리눅스의 마스코트다 되었다고 한다ㅎㅎ ( 귀여워… )</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://dodamon.github.io/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Lee Yeeun<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

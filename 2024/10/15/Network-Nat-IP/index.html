@@ -13,6 +13,9 @@
     
 
     
+        <meta name="description" content="네트워크는 이해하면 보이는데 이해하지 못하면 그저 블랙박스로 남아 있는 것 같다. 그래서 오늘은 좀 제대로 알기 위해 NAT (Network Address Translation) 와 PAT(Port Address Translation) 을 알아보려한다.
+??? publ"/>
+    
 
     <!--Author-->
     
@@ -21,10 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Dodamon"/>
+        <meta property="og:title" content="Network- Nat IP"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="네트워크는 이해하면 보이는데 이해하지 못하면 그저 블랙박스로 남아 있는 것 같다. 그래서 오늘은 좀 제대로 알기 위해 NAT (Network Address Translation) 와 PAT(Port Address Translation) 을 알아보려한다.
+??? publ"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>아카이브: 2024 - Dodamon</title>
+    <title>Network- Nat IP - Dodamon</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -155,75 +161,89 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2024</h1>
+                <div class="post-heading">
+                    <h1>Network- Nat IP</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-15
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2024/10/15/Network-Nat-IP/">
-        <h1 class="post-title archive">
-            Network- Nat IP
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2024-10-15
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2024/09/25/그림으로-배우는-리눅스-구조-6-장치-접근/">
-        <h1 class="post-title archive">
-            <그림으로 배우는 리눅스 구조> 6. 장치 접근
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2024-09-25
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2024/09/25/RHCSA-9/">
-        <h1 class="post-title archive">
-            RHCSA 9
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2024-09-25
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>네트워크는 이해하면 보이는데 이해하지 못하면 그저 블랙박스로 남아 있는 것 같다. 그래서 오늘은 좀 제대로 알기 위해 <strong>NAT (Network Address Translation)</strong> 와 <strong>PAT(Port Address Translation)</strong> 을 알아보려한다.</p>
+<p>??? public IP?? private IP?? Nat IP는 무엇인가…??</p>
+<p><img src="/images/241015_psyduck.gif"></p>
+</br>
+</br>
+
+<h2 id="IP-Internet-Protocol"><a href="#IP-Internet-Protocol" class="headerlink" title="IP (Internet Protocol)"></a>IP (Internet Protocol)</h2><p>개발을 하면서 특정 서버에 접근하려면 IP를 알아야한다. 또 우리가 google.com과 같이 특정 도메인에 접근할때 DNS를 통해 IP주소를 받게 된다. 그럼 이 IP주소는 컴퓨터 마다 고유한 걸까? 답은 ‘아닐 수 있다’ 이다. 컴퓨터 자체를 식별해주는 번호는 MAC 주소가 있고 <U>IP는 컴퓨터가 연결된 네트워크 끝단의 주소</U>이다.</p>
+<p>우선 이 정의가 잘 와닿지 않아도 계속가보자. 이런 IP에는 다음과 같은 주소 체계를 가지고 있고 이런 IP를 특히 <strong>IPv4</strong> 라고 불렀다. IPv4는 32비트 주소 체계를 사용해서 약 43억개의 고유 IP 주소를 생성 할 수 있다.</p>
+<p><img src="/images/241015_ipv4.png"></p>
+<p>하지만 충분 할줄 알았던 IPv4 주소 부족 문제를 해결하기 위해 또 내부망과 외부망을 분리해 보안을 높이기 위해 **공인 IP(Public IP)**와 <strong>사설 IP(Private IP)</strong> 가 등장하게 되었다. 아래의 사진과 같이 지구상에서 유일한 공인IP와 그 안에서만 유일한 주소가 사설 IP이다.</p>
+<p><img src="/images/241015_private_public_ip.png" alt="공인IP 와 사설IP"></p>
+<ul>
+<li>사설 IP는 ipconfig, ifconfig 를 통해 알수 있고</li>
+<li>공인 IP는 구글에 my ip or curl ifconfig.me 를 통해 알 수 있다.</li>
 </ul>
+<p>이렇게 되면서 여러 장치가 하나의 공인 IP 주소를 통해 인터넷에 접속할 수 있도록하는 <strong>NAT(Network Address Translation) 기술</strong> 이 등장하게 되었다.</p>
+</br>
+</br>
+
+<h2 id="NAT-Network-Address-Translation"><a href="#NAT-Network-Address-Translation" class="headerlink" title="NAT(Network Address Translation)"></a>NAT(Network Address Translation)</h2><p><strong>NAT</strong> 는 앞에서 말한 바와 같이 내부 네트워크의 사설 IP주소를 공인 IP주소로 변환해서 인터넷과의 통신을 가능하게 해주는 기술이다. NAT에는 다음과 같은 종류가 있다.</p>
+<p><img src="/images/241015_nat1.png" alt="Nat IP mapping"></p>
+<ul>
+<li><strong>정적 NAT(Static NAT) (1:1)</strong> : 내부의 특정 사설 IP 주소를 고정된 공인 IP 주소로 매핑</li>
+<li><strong>동적 NAT(Dynamic NAT) (n:n)</strong> : 내부의 사설 IP 주소들을 공인 IP 주소 풀(pool) 내의 주소와 동적으로 매핑 (ex 공유기)</li>
+<li><strong>PAT(Port Address Translation) (1:n)</strong> : 1개의 공인 IP 주소에 여러개의 사설 IP 주소가 매칭되는 방식으로 1개 공인 IP에 port를 구분하여 사설 PC를 구분할 수 있다.</li>
+</ul>
+<p><img src="/images/241015_nat.png" alt="Nat IP mapping"></p>
+<p>사실 위에 그림만 이해하면 Nat는 모두 이해한게 된다. NAT로 인해 사설 IP가 공인 IP로 변경되는 모습을 볼 수 있다.</p>
+<p>보통 웹서비스를 하는 서버는 공인IP를 가진다. 누구나 외부에서 접근해야하기 때문에 공인IP를 가진다. 하지만 보안을 위해 웹서버가 사설IP를 가진 다면 어떻게 될까?</p>
+<p>위에 그림처럼 외부에서 공인IP로 들어온 요청이 특정 사설IP와 어떻게 맵핑 될 수 있을까??</p>
+<h2 id="포트포워딩-다음-기회에…"><a href="#포트포워딩-다음-기회에…" class="headerlink" title="포트포워딩 (다음 기회에…)"></a>포트포워딩 (다음 기회에…)</h2><h4 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h4><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=GK3h936Co-k">https://www.youtube.com/watch?v=GK3h936Co-k</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

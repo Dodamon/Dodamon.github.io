@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="리눅스 운영체제를 공부하면서 새로 알게된 점이나 신기한 내용들을 정리하려한다. 그래서 이번 주제는 바로 “부팅(Booting)” 이다.
+Booting 이란Booting은 디스크에 저장되어 있는 운영체제를 메모리에 올리는 것이다.
+
+
+메모리(RAM, Random Acce"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Lee Yeeun"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux:Booting"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="리눅스 운영체제를 공부하면서 새로 알게된 점이나 신기한 내용들을 정리하려한다. 그래서 이번 주제는 바로 “부팅(Booting)” 이다.
+Booting 이란Booting은 디스크에 저장되어 있는 운영체제를 메모리에 올리는 것이다.
+
+
+메모리(RAM, Random Acce"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Dodamon"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://dodamon.github.ioimg/home-bg2.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://dodamon.github.ioimg/home-bg2.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Linux:Booting - Dodamon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://dodamon.github.io/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Linux:Booting</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-11-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>리눅스 운영체제를 공부하면서 새로 알게된 점이나 신기한 내용들을 정리하려한다. 그래서 이번 주제는 바로 “부팅(Booting)” 이다.</p>
+<h1 id="Booting-이란"><a href="#Booting-이란" class="headerlink" title="Booting 이란"></a>Booting 이란</h1><p>Booting은 디스크에 저장되어 있는 운영체제를 메모리에 올리는 것이다.</p>
+<p><img src="/images/20241102_linux_booting.jpg"></p>
+<ul>
+<li>메모리(RAM, Random Access Memory) : 주기억장치로, 전원이 꺼지면 데이터가 사라진다.</li>
+<li>디스크(HDD&#x2F;SSD) : 보조 기억, 장치로, 전원이 꺼져도 영구적으로 데이터를 저장한다.</li>
+</ul>
+<p>처음으로 컴퓨터를 켜면 부팅화면이 보인다 이때 컴퓨터는 전원이 꺼지면서 내려간 운영체제를 다시 실행하기 위헤 디스크에서 메모리로 로드하는 작업을 한다.<br>이것을 우리는 부팅이라고 한다. 각각의 순서를 자세히 보면</p>
+<p>각각의 순서는 크게 다음과 같다.</p>
+<ol>
+<li>전원을 켠다. ( 전기가 들어온다 )</li>
+<li>하드웨어가 정상적으로 작동하는지 확인한다.</li>
+<li>운영체제를 메모리에 로드한다.</li>
+</ol>
+<p>2번 부터 더 자세하게 알아보자</p>
+<h2 id="2-1-BIOS-Basic-Input-Output-System-UEFI-Unified-Extensible-Firmware-Interface-펌웨어-실행"><a href="#2-1-BIOS-Basic-Input-Output-System-UEFI-Unified-Extensible-Firmware-Interface-펌웨어-실행" class="headerlink" title="2-1. BIOS(Basic Input Output System) &#x2F; UEFI (Unified Extensible Firmware Interface) 펌웨어 실행"></a>2-1. BIOS(Basic Input Output System) &#x2F; UEFI (Unified Extensible Firmware Interface) 펌웨어 실행</h2><h2 id="POST-Power-On-Self-Test"><a href="#POST-Power-On-Self-Test" class="headerlink" title="POST(Power-On Self-Test)"></a>POST(Power-On Self-Test)</h2><p>컴퓨터에 전원이 들어오게 되면 CPU가 마더보드에 있는 ROM(비휘발성 메모리)에 있는 BIOS&#x2F;UEFI라는 펌웨어를 메모리에 올려 실행하게 된다. 그중 가장 먼저 <strong>POST(Power-On Self-Test)</strong> 를 실행한다. 여기서 POST는 컴퓨터에 연결된 각각의 하드웨어가 정상적으로 작동하는 지 확인하는 것이다. 만약 메모리가 정확하게 꽂혀있지 않으면 삡삡 하는 비프음(beep sound)가 난다고 한다.</p>
+<p>이 펌웨어 들은 디스크 중에 어떤 장치가 부팅 장치인지 확인하는 작업을 수행한다. 요즘은 BIOS는 많이 보이지 않고 대부분 UEFI로 되어있다고 한다.</p>
+<ul>
+<li>BIOS -&gt; Master Boot Recorder ( 하드드시크 가장 앞쪽에 있는 섹터, 512 byte) , Primary Partition Table</li>
+<li>UEFI -&gt; GUID Partition Table</li>
+</ul>
+<h2 id="2-3-GRUB-GRand-Unified-Bootloader"><a href="#2-3-GRUB-GRand-Unified-Bootloader" class="headerlink" title="2-3. GRUB(GRand Unified Bootloader)"></a>2-3. GRUB(GRand Unified Bootloader)</h2><p>커널을 어떻게 메모리에 올릴건지(파라미터 값) 확인하고 운영체제를 로드한다.</p>
+<p>여기서 신기한게 하나 있다.!!</p>
+<p>커널을 메모리에 로드하려면 &#x2F;boot 파일 시스템이 메모리에 마운트(mount) 되어야한다. &#x2F;boot&#x2F;vmlinuz에 커널을 메모리에 로드하고 커널에 필요한 파라미터 값이 들어 있기 때문이다. 하지만 파일시스템을 마운트하는 것은 운영체제가 한다… 즉 닭이 먼저냐 달걀이 먼저냐.. 가 되는 것이다. (나는 닭이 먼저라고 생각하다.)</p>
+<p>이런 문제 때문에 우리가 진짜 사용하는 운영체제 말고 오르지 운영체제를 로드하기 위한 경령화된 운영체제가 존재한다. 이것이 바로 <strong>ramdisk</strong>이다. 이것음 초기 부팅시 커널에 필요한 하드웨어 드라이버와 파일 시스템도구를 제공하는 역할을 한다.</p>
+<p>처음에 ramdisk의 파일시스템 &#x2F;sysroot에 &#x2F;(root) 파일 시스템을 마운트 한후에 부팅이 완료 되면 메모리에서 해제된다.</p>
+<h2 id="3-운영체제가-메모리에-로드된다"><a href="#3-운영체제가-메모리에-로드된다" class="headerlink" title="3. 운영체제가 메모리에 로드된다."></a>3. 운영체제가 메모리에 로드된다.</h2><h2 id="3-1-init-systemd-PID-1"><a href="#3-1-init-systemd-PID-1" class="headerlink" title="3-1. init &#x2F; systemd (PID&#x3D;1)"></a>3-1. init &#x2F; systemd (PID&#x3D;1)</h2><p>운영체제가 로드된 후 가장 처음으로 프로세스를 실행한다. 그 프로세스가 init&#x2F;systemd를 실행하게 된다. init은 예전 버전으로 redhat 7 버전 이후로는 systemd 로 바뀌게 된다. 가장 큰 변화는 필요한 Target(논리적인 서비스 unit 묶음)을 병렬로 서비스를 시작한다는 점이다. 즉 init은 모든 서비스를 한줄로 세워서 부팅하는데 시간이 오래 걸렸다면 systemd는 이를 병렬로 처리할 수 있게 했다.</p>
+<p>이제 모든 프로세스는 systemd를 부모로 하는 트리계층 구조로 생성되게 되는 것이다.</p>
+<p><img src="/images/20241102_linux_process_tree.png"></p>
+<p>단말창에 psTree 라고 입력하면 각 프로세스의 계층구조를 알 수 있다. 우리는 여기서 제일 위에 systemd라는 process가 PID&#x3D;1으로 실행 된것을 볼수 있다.</p>
+<h2 id="3-2-터미널-실행"><a href="#3-2-터미널-실행" class="headerlink" title="3-2. 터미널 실행"></a>3-2. 터미널 실행</h2><p>여기까지 부팅에 성공했다면 Target 값에 따라, 터미널을 띄워주거나 graphical.target이라면 로그인 GUI화면이 보이게 된다.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://dodamon.github.io/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Lee Yeeun<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
